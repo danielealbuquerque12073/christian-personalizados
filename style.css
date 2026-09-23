@@ -1,0 +1,493 @@
+/* ===========================
+   PALETA DE CORES
+=========================== */
+
+:root{
+    --offwhite:#F7F3EC;
+    --creme:#EDE3D6;
+    --bege:#D9C7B3;
+    --taupe:#A48F7D;
+    --cappuccino:#7A6658;
+    --champagne:#C8A86A;
+    --branco:#ffffff;
+}
+
+/* ===========================
+   RESET / GERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:170px;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--offwhite);
+    color:var(--cappuccino);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(247,243,236,.97);
+    backdrop-filter:blur(10px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:15px 20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+    z-index:999;
+}
+
+.logo{
+    margin-bottom:12px;
+}
+
+.logo img{
+    width:190px;
+    max-width:70vw;
+    transition:.3s;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--cappuccino);
+    font-size:16px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--champagne);
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:220px 8% 80px;
+}
+
+.hero-text{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(38px,5vw,58px);
+    font-weight:600;
+    color:var(--cappuccino);
+    line-height:1.15;
+    margin-bottom:20px;
+    white-space:normal;
+}
+
+.hero p{
+    font-size:clamp(16px,2vw,20px);
+    color:var(--taupe);
+    margin-bottom:35px;
+}
+
+.hero-image img{
+    width:450px;
+    max-width:100%;
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+.botoes{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn,
+.btn2{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    text-align:center;
+}
+
+.btn{
+    background:var(--champagne);
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 25px rgba(0,0,0,.15);
+}
+
+.btn2{
+    border:2px solid var(--champagne);
+    color:var(--champagne);
+}
+
+.btn2:hover{
+    background:var(--champagne);
+    color:white;
+}
+
+/* ===========================
+   SEÇÕES
+=========================== */
+
+section{
+    padding:90px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:clamp(32px,4vw,42px);
+    margin-bottom:45px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+/* ===========================
+   SOBRE
+=========================== */
+
+.sobre{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.sobre p{
+    font-size:17px;
+}
+
+/* ===========================
+   PRODUTOS
+=========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.card{
+    background:var(--branco);
+    padding:35px 25px;
+    border-radius:22px;
+    text-align:center;
+    transition:.3s;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:40px;
+    color:var(--champagne);
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-size:20px;
+}
+
+/* ===========================
+   GALERIA
+=========================== */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.galeria img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.03);
+}
+
+/* ===========================
+   CONTATO
+=========================== */
+
+.contato{
+    text-align:center;
+    background:var(--creme);
+    border-radius:25px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.contato p{
+    margin-bottom:25px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    margin-top:70px;
+    background:var(--cappuccino);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:900px){
+
+    header{
+        padding:14px 20px;
+    }
+
+    .logo{
+        margin-bottom:10px;
+    }
+
+    .logo img{
+        width:160px;
+    }
+
+    nav{
+        gap:20px;
+    }
+
+    nav a{
+        font-size:15px;
+    }
+
+    .hero{
+        padding-top:210px;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .galeria{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+/* ===========================
+   CELULAR
+=========================== */
+
+@media(max-width:600px){
+
+    html{
+        scroll-padding-top:150px;
+    }
+
+    header{
+        padding:12px 15px;
+    }
+
+    .logo img{
+        width:135px;
+    }
+
+    nav{
+        width:100%;
+        gap:8px 15px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:190px 20px 80px;
+    }
+
+    .hero h1{
+        font-size:38px;
+        line-height:1.1;
+        margin-bottom:18px;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:1.6;
+        margin-bottom:28px;
+    }
+
+    .botoes{
+        flex-direction:column;
+        width:100%;
+        gap:12px;
+    }
+
+    .btn,
+    .btn2{
+        width:100%;
+        max-width:300px;
+        padding:13px 20px;
+    }
+
+    section{
+        padding:65px 20px;
+    }
+
+    section h2{
+        font-size:34px;
+        margin-bottom:30px;
+    }
+
+    .sobre p{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .card{
+        padding:30px 20px;
+    }
+
+    .card i{
+        font-size:36px;
+    }
+
+    .card h3{
+        font-size:18px;
+    }
+
+    .galeria{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .galeria img{
+        border-radius:14px;
+    }
+
+    .contato{
+        border-radius:20px;
+        margin:0 15px;
+    }
+
+    footer{
+        margin-top:50px;
+        padding:30px 15px;
+        font-size:13px;
+    }
+}
+
+/* ===========================
+   CELULARES MUITO PEQUENOS
+=========================== */
+
+@media(max-width:380px){
+
+    .logo img{
+        width:120px;
+    }
+
+    nav{
+        gap:5px 10px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        padding-top:180px;
+    }
+
+    .hero h1{
+        font-size:33px;
+    }
+
+    section{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .galeria{
+        gap:8px;
+    }
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.esconder{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.8s;
+}
+
+.mostrar{
+    opacity:1;
+    transform:translateY(0);
+}
